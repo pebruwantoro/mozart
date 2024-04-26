@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        VStack{
+            Spacer()
+            HStack {
+                ForEach(SoundOptions.allCases,id: \.self){ option in
+                    SoundView(options: option) {
+                        SoundManager.instance.playSound(sound: option)
+                    }
+                }
+            }
         }
-        .padding()
+        
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

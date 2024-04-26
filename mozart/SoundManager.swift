@@ -1,6 +1,6 @@
 //
 //  SoundManager.swift
-//  mozart
+//  MusicTest
 //
 //  Created by Singgih Tulus Makmud on 26/04/24.
 //
@@ -8,22 +8,39 @@
 import Foundation
 import AVKit
 
-class SoundManager{
+
+import Foundation
+import AVKit
+
+class SoundManager {
     static let instance = SoundManager()
     
-    var player:AVAudioPlayer?
+    private var players: [SoundOptions: AVAudioPlayer] = [:]
     
-    func playSound(sound:SoundOptions){
-        guard let url = Bundle.main.url(forResource: sound.rawValue, withExtension: ".wav") else {return}
-        do{
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
-        }catch let error{
-            print("Error: \(error.localizedDescription)")
+    init() {
+        preloadSounds()
+    }
+    
+    private func preloadSounds() {
+        for option in SoundOptions.allCases {
+            guard let url = Bundle.main.url(forResource: option.rawValue, withExtension: ".wav") else { continue }
+            do {
+                let player = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
+                players[option] = player
+            } catch let error {
+                print("Error loading sound \(option.rawValue): \(error.localizedDescription)")
+            }
         }
-        
+    }
+    
+    func playSound(sound: SoundOptions) {
+        guard let player = players[sound] else { return }
+        player.currentTime = 0
+        player.play()
     }
 }
+
 
 enum SoundOptions:String,CaseIterable{
     case c
@@ -35,4 +52,3 @@ enum SoundOptions:String,CaseIterable{
 //    case b
 //    case coctave
 }
-

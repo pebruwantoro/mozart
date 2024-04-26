@@ -13,9 +13,9 @@ struct SoundView: View {
     var body: some View {
         Button(action: action) {
             Rectangle()
-                .frame(width: 80,height: 44)
+                .foregroundColor(.fourth)
+                .frame(width: 90,height: 44)
                 .aspectRatio(contentMode: .fill)
-                .padding()
                 .shadow(radius: 10)
         }
     }

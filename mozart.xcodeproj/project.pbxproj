@@ -62,7 +62,6 @@
 				24E348082BDB681900A63F97 /* e.wav */,
 				24E3480A2BDB681900A63F97 /* f.wav */,
 				24E3480B2BDB681900A63F97 /* g.wav */,
-				24E348132BDB683B00A63F97 /* SoundView.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -89,6 +88,7 @@
 				8BD772312BD9FFD600A16879 /* mozartApp.swift */,
 				8BD772332BD9FFD600A16879 /* ContentView.swift */,
 				24E348152BDB685400A63F97 /* SoundManager.swift */,
+				24E348132BDB683B00A63F97 /* SoundView.swift */,
 				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
 				24E348042BDB67ED00A63F97 /* Notes */,
 				8BD772372BD9FFD700A16879 /* Preview Content */,

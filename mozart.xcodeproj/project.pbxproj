@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24E3480C2BDB681900A63F97 /* d.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348052BDB681900A63F97 /* d.wav */; };
+		24E3480D2BDB681900A63F97 /* a.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348062BDB681900A63F97 /* a.wav */; };
+		24E3480E2BDB681900A63F97 /* coctave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348072BDB681900A63F97 /* coctave.wav */; };
+		24E3480F2BDB681900A63F97 /* e.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348082BDB681900A63F97 /* e.wav */; };
+		24E348102BDB681900A63F97 /* c.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348092BDB681900A63F97 /* c.wav */; };
+		24E348112BDB681900A63F97 /* f.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E3480A2BDB681900A63F97 /* f.wav */; };
+		24E348122BDB681900A63F97 /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E3480B2BDB681900A63F97 /* g.wav */; };
+		24E348142BDB683B00A63F97 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E348132BDB683B00A63F97 /* SoundView.swift */; };
+		24E348162BDB685400A63F97 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E348152BDB685400A63F97 /* SoundManager.swift */; };
 		8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD772312BD9FFD600A16879 /* mozartApp.swift */; };
 		8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD772332BD9FFD600A16879 /* ContentView.swift */; };
 		8BD772362BD9FFD700A16879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772352BD9FFD700A16879 /* Assets.xcassets */; };
@@ -15,6 +24,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24E348052BDB681900A63F97 /* d.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = d.wav; sourceTree = "<group>"; };
+		24E348062BDB681900A63F97 /* a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = a.wav; sourceTree = "<group>"; };
+		24E348072BDB681900A63F97 /* coctave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coctave.wav; sourceTree = "<group>"; };
+		24E348082BDB681900A63F97 /* e.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = e.wav; sourceTree = "<group>"; };
+		24E348092BDB681900A63F97 /* c.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = c.wav; sourceTree = "<group>"; };
+		24E3480A2BDB681900A63F97 /* f.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = f.wav; sourceTree = "<group>"; };
+		24E3480B2BDB681900A63F97 /* g.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = g.wav; sourceTree = "<group>"; };
+		24E348132BDB683B00A63F97 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
+		24E348152BDB685400A63F97 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		8BD7722E2BD9FFD600A16879 /* mozart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mozart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD772312BD9FFD600A16879 /* mozartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mozartApp.swift; sourceTree = "<group>"; };
 		8BD772332BD9FFD600A16879 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +52,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24E348042BDB67ED00A63F97 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				24E348062BDB681900A63F97 /* a.wav */,
+				24E348092BDB681900A63F97 /* c.wav */,
+				24E348072BDB681900A63F97 /* coctave.wav */,
+				24E348052BDB681900A63F97 /* d.wav */,
+				24E348082BDB681900A63F97 /* e.wav */,
+				24E3480A2BDB681900A63F97 /* f.wav */,
+				24E3480B2BDB681900A63F97 /* g.wav */,
+				24E348132BDB683B00A63F97 /* SoundView.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
 		8BD772252BD9FFD600A16879 = {
 			isa = PBXGroup;
 			children = (
@@ -55,7 +88,9 @@
 			children = (
 				8BD772312BD9FFD600A16879 /* mozartApp.swift */,
 				8BD772332BD9FFD600A16879 /* ContentView.swift */,
+				24E348152BDB685400A63F97 /* SoundManager.swift */,
 				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
+				24E348042BDB67ED00A63F97 /* Notes */,
 				8BD772372BD9FFD700A16879 /* Preview Content */,
 				8BD7723F2BDA173400A16879 /* README.md */,
 			);
@@ -128,9 +163,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E3480E2BDB681900A63F97 /* coctave.wav in Resources */,
 				8BD772402BDA173400A16879 /* README.md in Resources */,
+				24E348122BDB681900A63F97 /* g.wav in Resources */,
+				24E3480C2BDB681900A63F97 /* d.wav in Resources */,
+				24E3480F2BDB681900A63F97 /* e.wav in Resources */,
+				24E348102BDB681900A63F97 /* c.wav in Resources */,
 				8BD772392BD9FFD700A16879 /* Preview Assets.xcassets in Resources */,
+				24E348112BDB681900A63F97 /* f.wav in Resources */,
 				8BD772362BD9FFD700A16879 /* Assets.xcassets in Resources */,
+				24E3480D2BDB681900A63F97 /* a.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */,
+				24E348162BDB685400A63F97 /* SoundManager.swift in Sources */,
 				8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */,
+				24E348142BDB683B00A63F97 /* SoundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,14 +320,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mozart/Preview Content\"";
-				DEVELOPMENT_TEAM = U5CZ6K98KV;
+				DEVELOPMENT_TEAM = M6ZUY47J83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,14 +349,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mozart/Preview Content\"";
-				DEVELOPMENT_TEAM = U5CZ6K98KV;
+				DEVELOPMENT_TEAM = M6ZUY47J83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

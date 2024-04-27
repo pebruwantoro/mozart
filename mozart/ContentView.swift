@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var elapsedTime: TimeInterval = 0
+    @State private var shouldShowPlayRecordView = false
+    
+    init() {
+        SongService.instance.playSong(song: "backsound", volume: 0.1)
+    }
+    
     var body: some View {
         ZStack{
             Image("background")
@@ -30,9 +37,36 @@ struct ContentView: View {
                         }
                     }
                 }
-        
+            }
+        }.onAppear {
+            AudioRecorder.instance.startRecording()
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                elapsedTime += 1
+                if elapsedTime >= 15 {
+                    timer.invalidate()
+                    shouldShowPlayRecordView = true
+                    stopAllActivity()
+                }
             }
         }
+        .fullScreenCover(isPresented: $shouldShowPlayRecordView) {
+            PlayRecordSongView().onAppear {
+                Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+                    playRecordedSong()
+                    print("song should be played")
+                }
+            }
+        }
+
+    }
+    
+    private func stopAllActivity() {
+        SongService.instance.stopAllSounds()
+        AudioRecorder.instance.stopRecording()
+    }
+    
+    private func playRecordedSong() {
+        AudioRecorder.instance.playSong()
     }
 }
 

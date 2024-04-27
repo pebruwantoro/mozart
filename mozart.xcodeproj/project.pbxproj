@@ -21,6 +21,10 @@
 		8BD772362BD9FFD700A16879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772352BD9FFD700A16879 /* Assets.xcassets */; };
 		8BD772392BD9FFD700A16879 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */; };
 		8BD772402BDA173400A16879 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8BD7723F2BDA173400A16879 /* README.md */; };
+		8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BF5E61D2BDBB87B0009B059 /* backsound.wav */; };
+		8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6202BDBC7610009B059 /* SongService.swift */; };
+		8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6222BDBCAD70009B059 /* RecorderService.swift */; };
+		8BF5E6252BDBCCD00009B059 /* PlayRecordSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,12 +37,17 @@
 		24E3480B2BDB681900A63F97 /* g.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = g.wav; sourceTree = "<group>"; };
 		24E348132BDB683B00A63F97 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		24E348152BDB685400A63F97 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		8B73F88E2BDBF79E004EB1D5 /* microphone.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = microphone.xml; sourceTree = "<group>"; };
 		8BD7722E2BD9FFD600A16879 /* mozart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mozart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD772312BD9FFD600A16879 /* mozartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mozartApp.swift; sourceTree = "<group>"; };
 		8BD772332BD9FFD600A16879 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8BD772352BD9FFD700A16879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BD7723F2BDA173400A16879 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8BF5E61D2BDBB87B0009B059 /* backsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = backsound.wav; sourceTree = "<group>"; };
+		8BF5E6202BDBC7610009B059 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
+		8BF5E6222BDBCAD70009B059 /* RecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderService.swift; sourceTree = "<group>"; };
+		8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecordSongView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +64,7 @@
 		24E348042BDB67ED00A63F97 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				8BF5E61D2BDBB87B0009B059 /* backsound.wav */,
 				24E348062BDB681900A63F97 /* a.wav */,
 				24E348092BDB681900A63F97 /* c.wav */,
 				24E348072BDB681900A63F97 /* coctave.wav */,
@@ -69,6 +79,7 @@
 		8BD772252BD9FFD600A16879 = {
 			isa = PBXGroup;
 			children = (
+				8B73F88E2BDBF79E004EB1D5 /* microphone.xml */,
 				8BD772302BD9FFD600A16879 /* mozart */,
 				8BD7722F2BD9FFD600A16879 /* Products */,
 			);
@@ -85,10 +96,12 @@
 		8BD772302BD9FFD600A16879 /* mozart */ = {
 			isa = PBXGroup;
 			children = (
+				8BF5E61F2BDBC7540009B059 /* Service */,
 				8BD772312BD9FFD600A16879 /* mozartApp.swift */,
 				8BD772332BD9FFD600A16879 /* ContentView.swift */,
 				24E348152BDB685400A63F97 /* SoundManager.swift */,
 				24E348132BDB683B00A63F97 /* SoundView.swift */,
+				8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */,
 				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
 				24E348042BDB67ED00A63F97 /* Notes */,
 				8BD772372BD9FFD700A16879 /* Preview Content */,
@@ -103,6 +116,15 @@
 				8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8BF5E61F2BDBC7540009B059 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8BF5E6202BDBC7610009B059 /* SongService.swift */,
+				8BF5E6222BDBCAD70009B059 /* RecorderService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +188,7 @@
 				24E3480E2BDB681900A63F97 /* coctave.wav in Resources */,
 				8BD772402BDA173400A16879 /* README.md in Resources */,
 				24E348122BDB681900A63F97 /* g.wav in Resources */,
+				8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */,
 				24E3480C2BDB681900A63F97 /* d.wav in Resources */,
 				24E3480F2BDB681900A63F97 /* e.wav in Resources */,
 				24E348102BDB681900A63F97 /* c.wav in Resources */,
@@ -184,9 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */,
+				8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */,
 				24E348162BDB685400A63F97 /* SoundManager.swift in Sources */,
 				8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */,
 				24E348142BDB683B00A63F97 /* SoundView.swift in Sources */,
+				8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */,
+				8BF5E6252BDBCCD00009B059 /* PlayRecordSongView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = microphone.xml;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -302,6 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = microphone.xml;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -320,7 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mozart/Preview Content\"";
-				DEVELOPMENT_TEAM = M6ZUY47J83;
+				DEVELOPMENT_TEAM = U5CZ6K98KV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -349,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mozart/Preview Content\"";
-				DEVELOPMENT_TEAM = M6ZUY47J83;
+				DEVELOPMENT_TEAM = U5CZ6K98KV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

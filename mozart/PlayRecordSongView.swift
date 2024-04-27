@@ -11,16 +11,22 @@ struct PlayRecordSongView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     
     var body: some View {
-        ZStack{
-            Color(.second).edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        NavigationView {
             GeometryReader { geo in
-                Image("playRecoded")
-                    .resizable()
-                    .scaledToFit()
-                    .rotationEffect(.degrees(shouldRotate(geo)))
-                    .frame(width: geo.size.width * 0.8, height: geo.size.height * 0.8)
-                    .position(x: geo.size.width / 2, y: geo.size.height / 2)
-            }
+                ZStack {
+                    Color.first.edgesIgnoringSafeArea(.all)
+                    VStack {
+                        Spacer()
+                        LottieView(fileName: "playSong.json", loopMode: .loop)
+                            .scaledToFit()
+                            .imageScale(.large)
+                            .rotationEffect(.degrees(shouldRotate(geo)))
+                            .frame(width: geo.size.width * 1, height: geo.size.height * 1)
+                            .position(x: geo.size.width / 2, y: geo.size.height / 2)
+                        Spacer()
+                    }
+                }
+            }.background(.first)
         }
     }
     

@@ -11,7 +11,7 @@ import SwiftUI
 struct mozartApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
     }
 }

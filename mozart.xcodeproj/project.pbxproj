@@ -16,6 +16,11 @@
 		24E348122BDB681900A63F97 /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E3480B2BDB681900A63F97 /* g.wav */; };
 		24E348142BDB683B00A63F97 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E348132BDB683B00A63F97 /* SoundView.swift */; };
 		24E348162BDB685400A63F97 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E348152BDB685400A63F97 /* SoundManager.swift */; };
+		8B73F8932BDD0FCD004EB1D5 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */; };
+		8B73F8962BDD112F004EB1D5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8B73F8952BDD112F004EB1D5 /* Lottie */; };
+		8B73F8992BDD1253004EB1D5 /* startScreen.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B73F8982BDD1253004EB1D5 /* startScreen.json */; };
+		8B73F89C2BDD284B004EB1D5 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73F89B2BDD284B004EB1D5 /* LottieView.swift */; };
+		8B73F89E2BDD2D90004EB1D5 /* playSong.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B73F89D2BDD2D90004EB1D5 /* playSong.json */; };
 		8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD772312BD9FFD600A16879 /* mozartApp.swift */; };
 		8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD772332BD9FFD600A16879 /* ContentView.swift */; };
 		8BD772362BD9FFD700A16879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772352BD9FFD700A16879 /* Assets.xcassets */; };
@@ -38,6 +43,10 @@
 		24E348132BDB683B00A63F97 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		24E348152BDB685400A63F97 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		8B73F88E2BDBF79E004EB1D5 /* microphone.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = microphone.xml; sourceTree = "<group>"; };
+		8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		8B73F8982BDD1253004EB1D5 /* startScreen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = startScreen.json; sourceTree = "<group>"; };
+		8B73F89B2BDD284B004EB1D5 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		8B73F89D2BDD2D90004EB1D5 /* playSong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = playSong.json; sourceTree = "<group>"; };
 		8BD7722E2BD9FFD600A16879 /* mozart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mozart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD772312BD9FFD600A16879 /* mozartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mozartApp.swift; sourceTree = "<group>"; };
 		8BD772332BD9FFD600A16879 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B73F8962BDD112F004EB1D5 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +84,21 @@
 				24E3480B2BDB681900A63F97 /* g.wav */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		8B73F8972BDD11FE004EB1D5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8B73F89A2BDD2813004EB1D5 /* LottieViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				8B73F89B2BDD284B004EB1D5 /* LottieView.swift */,
+			);
+			path = LottieViewHelper;
 			sourceTree = "<group>";
 		};
 		8BD772252BD9FFD600A16879 = {
@@ -96,11 +121,16 @@
 		8BD772302BD9FFD600A16879 /* mozart */ = {
 			isa = PBXGroup;
 			children = (
+				8B73F89A2BDD2813004EB1D5 /* LottieViewHelper */,
+				8B73F8972BDD11FE004EB1D5 /* Assets */,
+				8B73F8982BDD1253004EB1D5 /* startScreen.json */,
+				8B73F89D2BDD2D90004EB1D5 /* playSong.json */,
 				8BF5E61F2BDBC7540009B059 /* Service */,
 				8BD772312BD9FFD600A16879 /* mozartApp.swift */,
 				8BD772332BD9FFD600A16879 /* ContentView.swift */,
 				24E348152BDB685400A63F97 /* SoundManager.swift */,
 				24E348132BDB683B00A63F97 /* SoundView.swift */,
+				8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */,
 				8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */,
 				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
 				24E348042BDB67ED00A63F97 /* Notes */,
@@ -143,6 +173,9 @@
 			dependencies = (
 			);
 			name = mozart;
+			packageProductDependencies = (
+				8B73F8952BDD112F004EB1D5 /* Lottie */,
+			);
 			productName = mozart;
 			productReference = 8BD7722E2BD9FFD600A16879 /* mozart.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 8BD772252BD9FFD600A16879;
+			packageReferences = (
+				8B73F8942BDD112F004EB1D5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 8BD7722F2BD9FFD600A16879 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,7 +221,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B73F8992BDD1253004EB1D5 /* startScreen.json in Resources */,
 				24E3480E2BDB681900A63F97 /* coctave.wav in Resources */,
+				8B73F89E2BDD2D90004EB1D5 /* playSong.json in Resources */,
 				8BD772402BDA173400A16879 /* README.md in Resources */,
 				24E348122BDB681900A63F97 /* g.wav in Resources */,
 				8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */,
@@ -208,11 +246,13 @@
 			files = (
 				8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */,
 				8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */,
+				8B73F89C2BDD284B004EB1D5 /* LottieView.swift in Sources */,
 				24E348162BDB685400A63F97 /* SoundManager.swift in Sources */,
 				8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */,
 				24E348142BDB683B00A63F97 /* SoundView.swift in Sources */,
 				8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */,
 				8BF5E6252BDBCCD00009B059 /* PlayRecordSongView.swift in Sources */,
+				8B73F8932BDD0FCD004EB1D5 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +460,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B73F8942BDD112F004EB1D5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B73F8952BDD112F004EB1D5 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B73F8942BDD112F004EB1D5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8BD772262BD9FFD600A16879 /* Project object */;
 }

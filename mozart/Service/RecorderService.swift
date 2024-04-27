@@ -7,6 +7,7 @@
 
 import Foundation
 import AVFoundation
+import ReplayKit
 
 
 class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
@@ -76,4 +77,9 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
             fatalError("Error playing recorded sound: \(error.localizedDescription)")
         }
     }    
+}
+
+
+class AudioRecorder2: NSObject , ObservableObject , AVAudioPlayerDelegate {
+    
 }

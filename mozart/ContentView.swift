@@ -10,9 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowPlayRecordView = false
+    @State private var backsound: String = "backsound"
     
+    private var backsoundDuration: String = ""
+      
     init() {
-        SongService.instance.playSong(song: "backsound", volume: 0.1)
+        SongService.instance.playSong(song: backsound, volume: 0.1)
+        self.backsoundDuration = songDuration(song: backsound)
     }
     
     var body: some View {
@@ -20,7 +24,10 @@ struct ContentView: View {
             Image("background")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            
+            VStack {
+                // GET SONG DURATION
+                Text("Song duration \(backsoundDuration)")
+            }
             VStack(spacing: 0){
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in
@@ -42,7 +49,7 @@ struct ContentView: View {
             AudioRecorder.instance.startRecording()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
-                if elapsedTime >= 15 {
+                if elapsedTime >= songLength(song: backsound) {
                     timer.invalidate()
                     shouldShowPlayRecordView = true
                     stopAllActivity()
@@ -53,7 +60,6 @@ struct ContentView: View {
             PlayRecordSongView().onAppear {
                 Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
                     playRecordedSong()
-                    print("song should be played")
                 }
             }
         }
@@ -67,6 +73,18 @@ struct ContentView: View {
     
     private func playRecordedSong() {
         AudioRecorder.instance.playSong()
+    }
+    
+    private func songLength(song: String) -> Double {
+        return SongService.instance.getSongDuration(file: song)
+    }
+    
+    private func songDuration(song: String) -> String {
+        let duration = SongService.instance.getSongDuration(file: song)
+        let minutes = Int(duration / 60)
+        let seconds = Int(duration.truncatingRemainder(dividingBy: 60))
+        
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 }
 

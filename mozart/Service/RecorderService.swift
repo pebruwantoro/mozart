@@ -12,24 +12,28 @@ import AVFoundation
 class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
     static let instance = AudioRecorder()
     
-    var audioRecorder : AVAudioRecorder!
-    var audioPlayer : AVAudioPlayer!
+    private var audioRecorder : AVAudioRecorder!
+    private var audioPlayer : AVAudioPlayer!
+    private var session : AVAudioSession! = AVAudioSession.sharedInstance()
     
     func startRecording(){
-            
-        let recordingSession = AVAudioSession.sharedInstance()
+        let opstions = [
+            AVAudioSession.CategoryOptions.defaultToSpeaker,
+            AVAudioSession.CategoryOptions.duckOthers,
+            AVAudioSession.CategoryOptions.interruptSpokenAudioAndMixWithOthers
+        ]
+        
         do {
-            try recordingSession.setCategory(.multiRoute, mode: .default)
-            try recordingSession.setActive(true)
-        } catch {
-            print("Can not setup the Recording")
+            
+            try session.setCategory(.playAndRecord, mode: .default, options: AVAudioSession.CategoryOptions(opstions))
+            try session.setActive(true)
+        } catch let error {
+            fatalError("Can not setup the Recording: \(error.localizedDescription)")
         }
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileName = path.appendingPathComponent("recording.wav")
-        print("ini path di record",path)
-        print("ini filename di record", fileName)
-        
+
         let settings = [
             AVFormatIDKey: Int(kAudioFormatLinearPCM),
             AVSampleRateKey: 44100,
@@ -41,41 +45,35 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
         
         do {
             audioRecorder = try AVAudioRecorder(url: fileName, settings: settings)
-//            audioRecorder.
             audioRecorder.prepareToRecord()
             audioRecorder.record()
-        } catch {
-            print("Failed to Setup the Recording")
+        } catch let error {
+            fatalError("Failed to Setup the Recording: \(error.localizedDescription)")
         }
     }
     
     
     func stopRecording(){
         audioRecorder.stop()
-        print("recording stop", audioRecorder.isRecording)
     }
     
     func playSong() {
-//        let playSession = AVAudioSession.sharedInstance()
-//        do {
-//            try playSession.setCategory(.playAndRecord, mode: .default)
-//            try playSession.setActive(true)
-//        } catch let error {
-//            print("error play session: \(error.localizedDescription)")
-//        }
+        do {
+            try session.setCategory(.soloAmbient, mode: .default, options: .duckOthers)
+            try session.setActive(true)
+        } catch let error {
+            fatalError("error play session: \(error.localizedDescription)")
+        }
         
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileName = path.appendingPathComponent("recording.wav")
-        print("ini path",path)
-        print("ini filename", fileName)
+
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: fileName)
-//            audioPlayer.volume = 100
-//            audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
         } catch let error {
-            print("Error playing recorded sound: \(error.localizedDescription)")
+            fatalError("Error playing recorded sound: \(error.localizedDescription)")
         }
-    }
+    }    
 }

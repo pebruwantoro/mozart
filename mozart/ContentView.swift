@@ -26,6 +26,7 @@ struct ContentView: View {
 //                // GET SONG DURATION
 //                Text("Song duration \(songDuration)")
 //            }
+
             VStack(spacing: 0){
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in

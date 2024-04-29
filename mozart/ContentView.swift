@@ -10,24 +10,22 @@ import SwiftUI
 struct ContentView: View {
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowPlayRecordView = false
-//    @State private var playingSong: String = "backsound"
-//    
-//    private var songDuration: String = ""
-      
-//    init() {
-//        SongService.instance.playSong(song: backsound, volume: 0.1)
-//        self.backsoundDuration = songDuration(song: backsound)
-//    }
+    @State private var timeCount = 0
+    private var song: String = "twinkleLittleStarAssest.mp3"
+    private var songDuration: String = ""
+    private var songTime: Double = 0
+    
+    init() {
+        self.songDuration = songDuration(song: song)
+        self.songTime = songLength(song: song)
+    }
     
     var body: some View {
         ZStack{
             Image("background")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-//            VStack {
-//                // GET SONG DURATION
-//                Text("Song duration \(songDuration)")
-//            }
+                
             VStack(spacing: 0){
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in
@@ -45,11 +43,30 @@ struct ContentView: View {
                     }
                 }
             }
-        }.onAppear {
+            
+            GeometryReader { geo in
+                ProgressBarMusicView(
+                    width: 10,
+                    height: Int(geo.size.height),
+                    progress: Int((Double(timeCount) / songTime) * Double(geo.size.height)))
+                    .padding(.top, 10)
+                    .padding(.leading, -20)
+                    .onAppear {                            
+                        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { time in
+                                self.timeCount += 1
+                                if timeCount >= Int(songTime) {
+                                    time.invalidate()
+                                }
+                            }
+                    }
+            }
+        }
+        .onTapGesture {
+            SongService.instance.playSong(song: song, volume: 0.3)
             AudioRecorder.instance.startRecording()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
-                if elapsedTime >= 10 {
+                if elapsedTime >= songTime {
                     timer.invalidate()
                     shouldShowPlayRecordView = true
                     stopAllActivity()
@@ -63,7 +80,6 @@ struct ContentView: View {
                 }
             }
         }
-
     }
     
     private func stopAllActivity() {
@@ -78,7 +94,7 @@ struct ContentView: View {
     private func songLength(song: String) -> Double {
         return SongService.instance.getSongDuration(file: song)
     }
-    
+        
     private func songDuration(song: String) -> String {
         let duration = SongService.instance.getSongDuration(file: song)
         let minutes = Int(duration / 60)

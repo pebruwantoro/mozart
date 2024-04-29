@@ -23,6 +23,8 @@
 		8B73F8A62BDE7D72004EB1D5 /* playRecordedSong.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B73F8A52BDE7D72004EB1D5 /* playRecordedSong.json */; };
 		8B73F8A82BDF404F004EB1D5 /* PlayGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73F8A72BDF404F004EB1D5 /* PlayGameView.swift */; };
 		8B73F8AA2BDF40C1004EB1D5 /* playGame.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B73F8A92BDF40C1004EB1D5 /* playGame.json */; };
+		8B73F8AC2BDF4CB6004EB1D5 /* ProgressBarMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73F8AB2BDF4CB6004EB1D5 /* ProgressBarMusicView.swift */; };
+		8B73F8AE2BDF6E31004EB1D5 /* twinkleLittleStarAssest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B73F8AD2BDF6E31004EB1D5 /* twinkleLittleStarAssest.mp3 */; };
 		8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD772312BD9FFD600A16879 /* mozartApp.swift */; };
 		8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD772332BD9FFD600A16879 /* ContentView.swift */; };
 		8BD772362BD9FFD700A16879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772352BD9FFD700A16879 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		8B73F8A52BDE7D72004EB1D5 /* playRecordedSong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = playRecordedSong.json; sourceTree = "<group>"; };
 		8B73F8A72BDF404F004EB1D5 /* PlayGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameView.swift; sourceTree = "<group>"; };
 		8B73F8A92BDF40C1004EB1D5 /* playGame.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = playGame.json; sourceTree = "<group>"; };
+		8B73F8AB2BDF4CB6004EB1D5 /* ProgressBarMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarMusicView.swift; sourceTree = "<group>"; };
+		8B73F8AD2BDF6E31004EB1D5 /* twinkleLittleStarAssest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twinkleLittleStarAssest.mp3; sourceTree = "<group>"; };
 		8BD7722E2BD9FFD600A16879 /* mozart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mozart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BD772312BD9FFD600A16879 /* mozartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mozartApp.swift; sourceTree = "<group>"; };
 		8BD772332BD9FFD600A16879 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		8B73F8972BDD11FE004EB1D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8B73F8AD2BDF6E31004EB1D5 /* twinkleLittleStarAssest.mp3 */,
 				8B73F8A32BDE7758004EB1D5 /* splashScreenAnimation.json */,
 				8B73F8A52BDE7D72004EB1D5 /* playRecordedSong.json */,
 				8B73F8A92BDF40C1004EB1D5 /* playGame.json */,
@@ -138,6 +143,7 @@
 				8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */,
 				8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */,
 				8B73F8A72BDF404F004EB1D5 /* PlayGameView.swift */,
+				8B73F8AB2BDF4CB6004EB1D5 /* ProgressBarMusicView.swift */,
 				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
 				24E348042BDB67ED00A63F97 /* Notes */,
 				8BD772372BD9FFD700A16879 /* Preview Content */,
@@ -231,6 +237,7 @@
 				8BD772402BDA173400A16879 /* README.md in Resources */,
 				24E348122BDB681900A63F97 /* g.wav in Resources */,
 				8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */,
+				8B73F8AE2BDF6E31004EB1D5 /* twinkleLittleStarAssest.mp3 in Resources */,
 				24E3480C2BDB681900A63F97 /* d.wav in Resources */,
 				8B73F8AA2BDF40C1004EB1D5 /* playGame.json in Resources */,
 				24E3480F2BDB681900A63F97 /* e.wav in Resources */,
@@ -254,6 +261,7 @@
 				8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */,
 				8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */,
 				8B73F89C2BDD284B004EB1D5 /* LottieView.swift in Sources */,
+				8B73F8AC2BDF4CB6004EB1D5 /* ProgressBarMusicView.swift in Sources */,
 				24E348162BDB685400A63F97 /* SoundManager.swift in Sources */,
 				8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */,
 				24E348142BDB683B00A63F97 /* SoundView.swift in Sources */,

@@ -13,7 +13,6 @@ class SoundManager {
     static let instance = SoundManager()
     
     private var players: [SoundOptions: AVAudioPlayer] = [:]
-    
     init() {
         preloadSounds()
     }
@@ -35,7 +34,7 @@ class SoundManager {
         guard let player = players[sound] else { return }
         player.currentTime = 0
         player.play()
-    }
+    }    
 }
 
 

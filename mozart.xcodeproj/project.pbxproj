@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2466CD632BDF646C007DEC3E /* MovingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466CD622BDF646C007DEC3E /* MovingBackground.swift */; };
 		24E3480C2BDB681900A63F97 /* d.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348052BDB681900A63F97 /* d.wav */; };
 		24E3480D2BDB681900A63F97 /* a.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348062BDB681900A63F97 /* a.wav */; };
 		24E3480E2BDB681900A63F97 /* coctave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348072BDB681900A63F97 /* coctave.wav */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2466CD622BDF646C007DEC3E /* MovingBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingBackground.swift; sourceTree = "<group>"; };
 		24E348052BDB681900A63F97 /* d.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = d.wav; sourceTree = "<group>"; };
 		24E348062BDB681900A63F97 /* a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = a.wav; sourceTree = "<group>"; };
 		24E348072BDB681900A63F97 /* coctave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coctave.wav; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				24E348132BDB683B00A63F97 /* SoundView.swift */,
 				8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */,
 				8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */,
+				2466CD622BDF646C007DEC3E /* MovingBackground.swift */,
 				8B73F8A72BDF404F004EB1D5 /* PlayGameView.swift */,
 				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
 				24E348042BDB67ED00A63F97 /* Notes */,
@@ -254,6 +257,7 @@
 				8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */,
 				8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */,
 				8B73F89C2BDD284B004EB1D5 /* LottieView.swift in Sources */,
+				2466CD632BDF646C007DEC3E /* MovingBackground.swift in Sources */,
 				24E348162BDB685400A63F97 /* SoundManager.swift in Sources */,
 				8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */,
 				24E348142BDB683B00A63F97 /* SoundView.swift in Sources */,

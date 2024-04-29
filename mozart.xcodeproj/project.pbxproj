@@ -17,6 +17,7 @@
 		24E348122BDB681900A63F97 /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E3480B2BDB681900A63F97 /* g.wav */; };
 		24E348142BDB683B00A63F97 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E348132BDB683B00A63F97 /* SoundView.swift */; };
 		24E348162BDB685400A63F97 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E348152BDB685400A63F97 /* SoundManager.swift */; };
+		8B01D9AF2BDFB19D000905FF /* ProgressBarMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01D9AE2BDFB19D000905FF /* ProgressBarMusicView.swift */; };
 		8B73F8932BDD0FCD004EB1D5 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */; };
 		8B73F8962BDD112F004EB1D5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8B73F8952BDD112F004EB1D5 /* Lottie */; };
 		8B73F89C2BDD284B004EB1D5 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B73F89B2BDD284B004EB1D5 /* LottieView.swift */; };
@@ -48,6 +49,7 @@
 		24E3480B2BDB681900A63F97 /* g.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = g.wav; sourceTree = "<group>"; };
 		24E348132BDB683B00A63F97 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		24E348152BDB685400A63F97 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		8B01D9AE2BDFB19D000905FF /* ProgressBarMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarMusicView.swift; sourceTree = "<group>"; };
 		8B73F88E2BDBF79E004EB1D5 /* microphone.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = microphone.xml; sourceTree = "<group>"; };
 		8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		8B73F89B2BDD284B004EB1D5 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */,
 				2466CD622BDF646C007DEC3E /* MovingBackground.swift */,
 				8B73F8A72BDF404F004EB1D5 /* PlayGameView.swift */,
+				8B01D9AE2BDFB19D000905FF /* ProgressBarMusicView.swift */,
 				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
 				24E348042BDB67ED00A63F97 /* Notes */,
 				8BD772372BD9FFD700A16879 /* Preview Content */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B01D9AF2BDFB19D000905FF /* ProgressBarMusicView.swift in Sources */,
 				8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */,
 				8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */,
 				8B73F89C2BDD284B004EB1D5 /* LottieView.swift in Sources */,

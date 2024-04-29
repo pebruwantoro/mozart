@@ -60,22 +60,19 @@ struct ContentView: View {
         Notes(nada: 0, beat: 1),
         Notes(nada: 0, beat: 1),
     ]
-    //    @State private var playingSong: String = "backsound"
-    //
-    //    private var songDuration: String = ""
     
-    //    init() {
-    //        SongService.instance.playSong(song: backsound, volume: 0.1)
-    //        self.backsoundDuration = songDuration(song: backsound)
-    //    }
+    @State private var timeCount = 0
+    private var songTime: Double = 0
+    
+    init() {
+        self.songTime = songLength(song: "backsound")
+    }
     
     var body: some View {
         ZStack{
+                        
             MovingBackground()
-            //            VStack {
-            //                // GET SONG DURATION
-            //                Text("Song duration \(songDuration)")
-            //            }
+                        
             VStack(spacing: 0){
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in
@@ -101,27 +98,42 @@ struct ContentView: View {
                 }.frame(width: 1000).background(Color(.first))
                     .scaledToFill()
                     .safeAreaPadding(.bottom,24)
-                
-                
+            }
+            
+            ProgressBarMusicView(
+                width: 5,
+                height: Int(300),
+                progress: Int((Double(timeCount) / songTime) * Double(300)))
+            .padding(.top, 5)
+            .padding(.leading, -380)
+            .onAppear {
+                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { time in
+                    self.timeCount += 1
+                    print(songTime, timeCount)
+                    if timeCount >= Int(songTime) {
+                        time.invalidate()
+                    }
+                }
             }
         }.onAppear {
+//            SongService.instance.playSong(song: "backsound", volume: 0.1)
             AudioRecorder.instance.startRecording()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
-                if elapsedTime >= 10 {
+                if elapsedTime >= songTime {
                     timer.invalidate()
                     shouldShowPlayRecordView = true
                     stopAllActivity()
                 }
             }
         }
-        //        .fullScreenCover(isPresented: $shouldShowPlayRecordView) {
-        //            PlayRecordSongView().onAppear {
-        //                Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
-        //                    playRecordedSong()
-        //                }
-        //            }
-        //        }
+//        .fullScreenCover(isPresented: $shouldShowPlayRecordView) {
+//            PlayRecordSongView().onAppear {
+//                Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { timer in
+//                    playRecordedSong()
+//                }
+//            }
+//        }
         
     }
     

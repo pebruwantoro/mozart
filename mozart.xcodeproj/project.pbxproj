@@ -30,6 +30,7 @@
 		8BD772362BD9FFD700A16879 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772352BD9FFD700A16879 /* Assets.xcassets */; };
 		8BD772392BD9FFD700A16879 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */; };
 		8BD772402BDA173400A16879 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8BD7723F2BDA173400A16879 /* README.md */; };
+		8BEC2C562BDFD08100AD1864 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BEC2C552BDFD08100AD1864 /* .gitignore */; };
 		8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BF5E61D2BDBB87B0009B059 /* backsound.wav */; };
 		8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6202BDBC7610009B059 /* SongService.swift */; };
 		8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6222BDBCAD70009B059 /* RecorderService.swift */; };
@@ -63,6 +64,7 @@
 		8BD772352BD9FFD700A16879 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BD7723F2BDA173400A16879 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8BEC2C552BDFD08100AD1864 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8BF5E61D2BDBB87B0009B059 /* backsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = backsound.wav; sourceTree = "<group>"; };
 		8BF5E6202BDBC7610009B059 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
 		8BF5E6222BDBCAD70009B059 /* RecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderService.swift; sourceTree = "<group>"; };
@@ -119,7 +121,9 @@
 		8BD772252BD9FFD600A16879 = {
 			isa = PBXGroup;
 			children = (
+				8BEC2C552BDFD08100AD1864 /* .gitignore */,
 				8B73F88E2BDBF79E004EB1D5 /* microphone.xml */,
+				8BD7723F2BDA173400A16879 /* README.md */,
 				8BD772302BD9FFD600A16879 /* mozart */,
 				8BD7722F2BD9FFD600A16879 /* Products */,
 			);
@@ -153,7 +157,6 @@
 				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
 				24E348042BDB67ED00A63F97 /* Notes */,
 				8BD772372BD9FFD700A16879 /* Preview Content */,
-				8BD7723F2BDA173400A16879 /* README.md */,
 			);
 			path = mozart;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				24E348102BDB681900A63F97 /* c.wav in Resources */,
 				8B73F8A62BDE7D72004EB1D5 /* playRecordedSong.json in Resources */,
 				8BD772392BD9FFD700A16879 /* Preview Assets.xcassets in Resources */,
+				8BEC2C562BDFD08100AD1864 /* .gitignore in Resources */,
 				24E348112BDB681900A63F97 /* f.wav in Resources */,
 				8BD772362BD9FFD700A16879 /* Assets.xcassets in Resources */,
 				24E3480D2BDB681900A63F97 /* a.wav in Resources */,

@@ -14,7 +14,7 @@ class SongService {
     private var player: AVAudioPlayer!
     
     func playSong(song: String, volume: Float?) {
-        guard let url = Bundle.main.url(forResource: song, withExtension: "wav") else { return }
+        guard let url = Bundle.main.url(forResource: song, withExtension: "mp3") else { return }
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
@@ -35,7 +35,7 @@ class SongService {
     }
     
     func getSongDuration(file: String) -> Double {
-        guard let url = Bundle.main.url(forResource: file, withExtension: "wav")
+        guard let url = Bundle.main.url(forResource: file, withExtension: "mp3")
         else {
             fatalError("Can't find the song")
         }

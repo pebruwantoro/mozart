@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct PianoSheet: View {
-    @State var pianoOffset: CGFloat = -1500
+    @State var pianoOffset: CGFloat = -2750
     @State var beat: Double
     @State var tone : Int
     @State var time:Double =  0.0124
@@ -19,6 +19,7 @@ struct PianoSheet: View {
                 if(i==tone){
                     Rectangle()
                         .size(CGSize(width: 90, height: beat))
+                        .fill(.third)
                     
                 }
                 else{
@@ -46,6 +47,9 @@ func pianoOffsetValue(beat: Double,offsetVal: CGFloat)->CGFloat{
     var returnVal: CGFloat = offsetVal
     if(beat==100){
        returnVal = offsetVal - 50
+    }
+    else{
+        returnVal = offsetVal - 25
     }
     return returnVal
 }

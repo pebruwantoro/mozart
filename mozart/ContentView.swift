@@ -64,7 +64,7 @@ struct ContentView: View {
     private var songTime: Double = 0
 
     init() {
-        self.songTime = songLength(song: "backsound")
+        self.songTime = songLength(song: "twinkle")
     }
     
     var body: some View {
@@ -112,7 +112,7 @@ struct ContentView: View {
                 }
             }
         }.onAppear {
-            SongService.instance.playSong(song: "backsound", volume: 0.1)
+            SongService.instance.playSong(song: "twinkle", volume: 0.1)
             AudioRecorder.instance.startRecording()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1

@@ -1,10 +1,3 @@
-//
-//  MovingBackground.swift
-//  mozart
-//
-//  Created by Singgih Tulus Makmud on 29/04/24.
-//
-
 import SwiftUI
 
 struct MovingBackground: View {
@@ -12,35 +5,21 @@ struct MovingBackground: View {
     @State private var timer: Timer?
 
     let speed: CGFloat = 0.7
+    let numberOfBackgrounds = 10 // Adjust the number of background images as needed
 
     var body: some View {
         GeometryReader { geometry in
-            ZStack {
-                Image("background")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .offset(x: self.xOffset)
-                Image("background")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .offset(x: self.xOffset + geometry.size.width)
-                Image("background")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .offset(x: self.xOffset + geometry.size.width)
-                Image("background")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .offset(x: self.xOffset + geometry.size.width)
-                Image("background")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .offset(x: self.xOffset + geometry.size.width)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 0) {
+                    ForEach(0..<self.numberOfBackgrounds) { index in
+                        Image("background")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geometry.size.width, height: geometry.size.height)
+                    }
+                }
+                .frame(width: geometry.size.width * CGFloat(self.numberOfBackgrounds), height: geometry.size.height)
+                .offset(x: self.xOffset)
             }
             .onAppear {
                 self.startTimer()
@@ -65,14 +44,16 @@ struct MovingBackground: View {
 
     func updateOffset() {
         self.xOffset -= speed
-        if self.xOffset < -UIScreen.main.bounds.width {
+        let totalWidth = UIScreen.main.bounds.width * CGFloat(self.numberOfBackgrounds)
+        if self.xOffset <= -totalWidth {
+            // Reset the offset to ensure continuous looping
             self.xOffset = 0
         }
     }
 }
 
-
-
-#Preview {
-    MovingBackground()
+struct MovingBackground_Previews: PreviewProvider {
+    static var previews: some View {
+        MovingBackground()
+    }
 }

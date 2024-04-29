@@ -10,24 +10,24 @@ import SwiftUI
 struct ContentView: View {
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowPlayRecordView = false
-    @State private var backsound: String = "backsound"
-    
-    private var backsoundDuration: String = ""
+//    @State private var playingSong: String = "backsound"
+//    
+//    private var songDuration: String = ""
       
-    init() {
-        SongService.instance.playSong(song: backsound, volume: 0.1)
-        self.backsoundDuration = songDuration(song: backsound)
-    }
+//    init() {
+//        SongService.instance.playSong(song: backsound, volume: 0.1)
+//        self.backsoundDuration = songDuration(song: backsound)
+//    }
     
     var body: some View {
         ZStack{
             Image("background")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            VStack {
-                // GET SONG DURATION
-                Text("Song duration \(backsoundDuration)")
-            }
+//            VStack {
+//                // GET SONG DURATION
+//                Text("Song duration \(songDuration)")
+//            }
             VStack(spacing: 0){
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in
@@ -49,7 +49,7 @@ struct ContentView: View {
             AudioRecorder.instance.startRecording()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
-                if elapsedTime >= songLength(song: backsound) {
+                if elapsedTime >= 10 {
                     timer.invalidate()
                     shouldShowPlayRecordView = true
                     stopAllActivity()

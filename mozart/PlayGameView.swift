@@ -1,18 +1,24 @@
 //
-//  SplashScreenView.swift
+//  playGameView.swift
 //  mozart
 //
-//  Created by Doni Pebruwantoro on 27/04/24.
+//  Created by Doni Pebruwantoro on 29/04/24.
 //
 
 import SwiftUI
 
-struct SplashScreenView: View {
+struct PlayGameView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowContentView = false
-
+    
+    @State private var backsound: String = "backsound"
+    
+    init() {
+        SongService.instance.playSong(song: backsound, volume: 0.1)    }
+    
+    
     var body: some View {
         NavigationView {
             GeometryReader { geo in
@@ -20,30 +26,24 @@ struct SplashScreenView: View {
                     Color.first.edgesIgnoringSafeArea(.all)
                     VStack {
                         Spacer()
-                        
-                        LottieView(fileName: "splashScreenAnimation.json", loopMode: .loop, speed: 1)
+                        LottieView(fileName: "playGame.json", loopMode: .loop, speed: 2.0)
                             .scaledToFit()
                             .imageScale(.large)
                             .rotationEffect(.degrees(shouldRotate(geo)))
-                            .frame(width: geo.size.width * 1, height: geo.size.height * 1)
+                            .frame(width: geo.size.width * 3, height: geo.size.height * 3)
                             .position(x: geo.size.width / 2, y: geo.size.height / 2)
                         Spacer()
                     }
                 }
             }.background(.first)
-        }.onAppear {
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-                elapsedTime += 1
-                if elapsedTime == 4 {
-                    timer.invalidate()
-                    shouldShowContentView = true
-                }
-            }
+        }.onTapGesture {
+            shouldShowContentView = true
+            SongService.instance.stopAllSounds()
         }
         .fullScreenCover(isPresented: $shouldShowContentView) {
-            PlayGameView()
+            ContentView()
         }
-
+        
     }
     
     private func shouldRotate(_ geometry: GeometryProxy) -> Double {
@@ -52,5 +52,5 @@ struct SplashScreenView: View {
 }
 
 #Preview {
-    SplashScreenView()
+    PlayGameView()
 }

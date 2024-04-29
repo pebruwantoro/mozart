@@ -17,11 +17,11 @@ struct PlayRecordSongView: View {
                     Color.first.edgesIgnoringSafeArea(.all)
                     VStack {
                         Spacer()
-                        LottieView(fileName: "playSong.json", loopMode: .loop)
+                        LottieView(fileName: "playRecordedSong.json", loopMode: .loop, speed: 1.0)
                             .scaledToFit()
                             .imageScale(.large)
                             .rotationEffect(.degrees(shouldRotate(geo)))
-                            .frame(width: geo.size.width * 1, height: geo.size.height * 1)
+                            .frame(width: geo.size.width * 3, height: geo.size.height * 3)
                             .position(x: geo.size.width / 2, y: geo.size.height / 2)
                         Spacer()
                     }

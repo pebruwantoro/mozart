@@ -12,6 +12,7 @@ struct LottieView: UIViewRepresentable {
     
     var fileName: String
     let loopMode: LottieLoopMode
+    let speed: Float
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         
@@ -22,6 +23,7 @@ struct LottieView: UIViewRepresentable {
         animationView.loopMode = loopMode
         animationView.play()
         animationView.contentMode = .scaleAspectFill
+        animationView.animationSpeed = CGFloat(speed)
         return animationView
     }
 }

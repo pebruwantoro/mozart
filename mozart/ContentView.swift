@@ -21,9 +21,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-            Image("background")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
+            MovingBackground()
 //            VStack {
 //                // GET SONG DURATION
 //                Text("Song duration \(songDuration)")
@@ -89,7 +87,7 @@ struct ContentView: View {
 }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentViewPreview: PreviewProvider {
     static var previews: some View {
         ContentView()
     }

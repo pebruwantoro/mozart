@@ -33,6 +33,8 @@
 		8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6202BDBC7610009B059 /* SongService.swift */; };
 		8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6222BDBCAD70009B059 /* RecorderService.swift */; };
 		8BF5E6252BDBCCD00009B059 /* PlayRecordSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */; };
+		958AB2472BDF6CAF00CA0DDA /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AB2462BDF6CAF00CA0DDA /* Notes.swift */; };
+		958AB2492BDF6D0800CA0DDA /* PianoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		8BF5E6202BDBC7610009B059 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
 		8BF5E6222BDBCAD70009B059 /* RecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderService.swift; sourceTree = "<group>"; };
 		8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecordSongView.swift; sourceTree = "<group>"; };
+		958AB2462BDF6CAF00CA0DDA /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 				8B73F8972BDD11FE004EB1D5 /* Assets */,
 				8BF5E61F2BDBC7540009B059 /* Service */,
 				8BD772312BD9FFD600A16879 /* mozartApp.swift */,
+				958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */,
+				958AB2462BDF6CAF00CA0DDA /* Notes.swift */,
 				8BD772332BD9FFD600A16879 /* ContentView.swift */,
 				24E348152BDB685400A63F97 /* SoundManager.swift */,
 				24E348132BDB683B00A63F97 /* SoundView.swift */,
@@ -257,6 +263,7 @@
 				8BD772342BD9FFD600A16879 /* ContentView.swift in Sources */,
 				8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */,
 				8B73F89C2BDD284B004EB1D5 /* LottieView.swift in Sources */,
+				958AB2492BDF6D0800CA0DDA /* PianoSheet.swift in Sources */,
 				2466CD632BDF646C007DEC3E /* MovingBackground.swift in Sources */,
 				24E348162BDB685400A63F97 /* SoundManager.swift in Sources */,
 				8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */,
@@ -265,6 +272,7 @@
 				8B73F8A82BDF404F004EB1D5 /* PlayGameView.swift in Sources */,
 				8BF5E6252BDBCCD00009B059 /* PlayRecordSongView.swift in Sources */,
 				8B73F8932BDD0FCD004EB1D5 /* SplashScreenView.swift in Sources */,
+				958AB2472BDF6CAF00CA0DDA /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

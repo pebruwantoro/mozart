@@ -30,7 +30,7 @@ struct SoundView: View {
         }) {
             Rectangle()
                 .foregroundColor(.fourth)
-                .frame(width: 90, height: 44)
+                .frame(width: 90, height: 50)
                 .aspectRatio(contentMode: .fill)
                 .shadow(radius: 10)
                 .scaleEffect(isPressed ? 0.9 : 1.0)

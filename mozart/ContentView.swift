@@ -10,22 +10,72 @@ import SwiftUI
 struct ContentView: View {
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowPlayRecordView = false
-//    @State private var playingSong: String = "backsound"
-//    
-//    private var songDuration: String = ""
-      
-//    init() {
-//        SongService.instance.playSong(song: backsound, volume: 0.1)
-//        self.backsoundDuration = songDuration(song: backsound)
-//    }
+    
+    var notes = [
+        Notes(nada: 0, beat: 2),
+        Notes(nada: 1, beat: 1),
+        Notes(nada: 1, beat: 1),
+        Notes(nada: 2, beat: 1),
+        Notes(nada: 2, beat: 1),
+        Notes(nada: 3, beat: 1),
+        Notes(nada: 3, beat: 1),
+        
+        Notes(nada: 4, beat: 2),
+        Notes(nada: 5, beat: 1),
+        Notes(nada: 5, beat: 1),
+        Notes(nada: 4, beat: 1),
+        Notes(nada: 4, beat: 1),
+        Notes(nada: 0, beat: 1),
+        Notes(nada: 0, beat: 1),
+        
+        Notes(nada: 1, beat: 2),
+        Notes(nada: 2, beat: 1),
+        Notes(nada: 2, beat: 1),
+        Notes(nada: 3, beat: 1),
+        Notes(nada: 3, beat: 1),
+        Notes(nada: 4, beat: 1),
+        Notes(nada: 4, beat: 1),
+        
+        Notes(nada: 1, beat: 2),
+        Notes(nada: 2, beat: 1),
+        Notes(nada: 2, beat: 1),
+        Notes(nada: 3, beat: 1),
+        Notes(nada: 3, beat: 1),
+        Notes(nada: 4, beat: 1),
+        Notes(nada: 4, beat: 1),
+        
+        Notes(nada: 0, beat: 2),
+        Notes(nada: 1, beat: 1),
+        Notes(nada: 1, beat: 1),
+        Notes(nada: 2, beat: 1),
+        Notes(nada: 2, beat: 1),
+        Notes(nada: 3, beat: 1),
+        Notes(nada: 3, beat: 1),
+        
+        Notes(nada: 4, beat: 2),
+        Notes(nada: 5, beat: 1),
+        Notes(nada: 5, beat: 1),
+        Notes(nada: 4, beat: 1),
+        Notes(nada: 4, beat: 1),
+        Notes(nada: 0, beat: 1),
+        Notes(nada: 0, beat: 1),
+    ]
+    //    @State private var playingSong: String = "backsound"
+    //
+    //    private var songDuration: String = ""
+    
+    //    init() {
+    //        SongService.instance.playSong(song: backsound, volume: 0.1)
+    //        self.backsoundDuration = songDuration(song: backsound)
+    //    }
     
     var body: some View {
         ZStack{
             MovingBackground()
-//            VStack {
-//                // GET SONG DURATION
-//                Text("Song duration \(songDuration)")
-//            }
+            //            VStack {
+            //                // GET SONG DURATION
+            //                Text("Song duration \(songDuration)")
+            //            }
             VStack(spacing: 0){
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in
@@ -35,13 +85,24 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fill)
                     }
                 }
+                
+                VStack(){
+                    ForEach(notes) { note in
+                        PianoSheet(beat: note.beat, tone: note.nada)
+                    }
+                }.frame(width:690,height: 0)
+                
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in
                         SoundView(options: option) {
                             SoundManager.instance.playSound(sound: option)
                         }
                     }
-                }
+                }.frame(width: 1000).background(Color(.first))
+                    .scaledToFill()
+                    .safeAreaPadding(.bottom,24)
+                
+                
             }
         }.onAppear {
             AudioRecorder.instance.startRecording()
@@ -54,14 +115,14 @@ struct ContentView: View {
                 }
             }
         }
-        .fullScreenCover(isPresented: $shouldShowPlayRecordView) {
-            PlayRecordSongView().onAppear {
-                Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
-                    playRecordedSong()
-                }
-            }
-        }
-
+        //        .fullScreenCover(isPresented: $shouldShowPlayRecordView) {
+        //            PlayRecordSongView().onAppear {
+        //                Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+        //                    playRecordedSong()
+        //                }
+        //            }
+        //        }
+        
     }
     
     private func stopAllActivity() {

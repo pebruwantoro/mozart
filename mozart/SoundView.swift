@@ -8,15 +8,35 @@
 import SwiftUI
 
 struct SoundView: View {
-    let options:SoundOptions
-    let action:() -> Void
+    @State private var counter = 0
+    let options: SoundOptions
+    let action: () -> Void
+    @State private var isPressed = false
+
     var body: some View {
-        Button(action: action) {
+        Button(action: {
+            counter += 1
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+            action()
+            withAnimation(.easeInOut(duration: 0.1)) {
+                isPressed = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                withAnimation(.easeInOut(duration: 0.1)) {
+                    isPressed = false
+                }
+            }
+        }) {
             Rectangle()
                 .foregroundColor(.fourth)
-                .frame(width: 90,height: 44)
+                .frame(width: 90, height: 44)
                 .aspectRatio(contentMode: .fill)
                 .shadow(radius: 10)
+                .scaleEffect(isPressed ? 0.9 : 1.0)
+        }
+        .onTapGesture {
+
         }
     }
 }

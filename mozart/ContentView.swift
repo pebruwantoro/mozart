@@ -70,7 +70,6 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             MovingBackground()
-            
             VStack(spacing: 0){
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in

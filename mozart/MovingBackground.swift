@@ -11,7 +11,7 @@ struct MovingBackground: View {
     @State private var xOffset: CGFloat = 0
     @State private var timer: Timer?
 
-    let speed: CGFloat = 1.0 // Adjust the speed of the background
+    let speed: CGFloat = 0.7
 
     var body: some View {
         GeometryReader { geometry in
@@ -21,6 +21,21 @@ struct MovingBackground: View {
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: geometry.size.height)
                     .offset(x: self.xOffset)
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .offset(x: self.xOffset + geometry.size.width)
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .offset(x: self.xOffset + geometry.size.width)
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .offset(x: self.xOffset + geometry.size.width)
                 Image("background")
                     .resizable()
                     .scaledToFill()

@@ -35,9 +35,9 @@
 		8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6202BDBC7610009B059 /* SongService.swift */; };
 		8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6222BDBCAD70009B059 /* RecorderService.swift */; };
 		8BF5E6252BDBCCD00009B059 /* PlayRecordSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */; };
+		9564167E2BE088D4001D0DF8 /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9564167D2BE088D4001D0DF8 /* twinkle.mp3 */; };
 		958AB2472BDF6CAF00CA0DDA /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AB2462BDF6CAF00CA0DDA /* Notes.swift */; };
 		958AB2492BDF6D0800CA0DDA /* PianoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */; };
-		95A079E72BDFE5630092BDA7 /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95A079E62BDFE5630092BDA7 /* twinkle.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,9 +70,9 @@
 		8BF5E6202BDBC7610009B059 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
 		8BF5E6222BDBCAD70009B059 /* RecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderService.swift; sourceTree = "<group>"; };
 		8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecordSongView.swift; sourceTree = "<group>"; };
+		9564167D2BE088D4001D0DF8 /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = twinkle.mp3; path = ../../../../Downloads/twinkle.mp3; sourceTree = "<group>"; };
 		958AB2462BDF6CAF00CA0DDA /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoSheet.swift; sourceTree = "<group>"; };
-		95A079E62BDFE5630092BDA7 /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = twinkle.mp3; path = ../../../../Downloads/twinkle.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		24E348042BDB67ED00A63F97 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				95A079E62BDFE5630092BDA7 /* twinkle.mp3 */,
+				9564167D2BE088D4001D0DF8 /* twinkle.mp3 */,
 				8BF5E61D2BDBB87B0009B059 /* backsound.wav */,
 				24E348062BDB681900A63F97 /* a.wav */,
 				24E348092BDB681900A63F97 /* c.wav */,
@@ -252,7 +252,7 @@
 				24E3480C2BDB681900A63F97 /* d.wav in Resources */,
 				8B73F8AA2BDF40C1004EB1D5 /* playGame.json in Resources */,
 				24E3480F2BDB681900A63F97 /* e.wav in Resources */,
-				95A079E72BDFE5630092BDA7 /* twinkle.mp3 in Resources */,
+				9564167E2BE088D4001D0DF8 /* twinkle.mp3 in Resources */,
 				24E348102BDB681900A63F97 /* c.wav in Resources */,
 				8B73F8A62BDE7D72004EB1D5 /* playRecordedSong.json in Resources */,
 				8BD772392BD9FFD700A16879 /* Preview Assets.xcassets in Resources */,

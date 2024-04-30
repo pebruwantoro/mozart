@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowPlayRecordView = false
+    private var delayed: Double = 3
     
     var notes = [
         Notes(nada: -1, beat: 1),
@@ -70,7 +71,8 @@ struct ContentView: View {
     private var songTime: Double = 0
 
     init() {
-        self.songTime = songLength(song: "twinkle")
+        self.songTime = songLength(song: "twinkle.mp3")
+        SongService.instance.preparePlaySong(song: "twinkle.mp3", volume: 0.4)
     }
     
     var body: some View {
@@ -105,24 +107,27 @@ struct ContentView: View {
             ProgressBarMusicView(
                 width: 5,
                 height: Int(300),
-                progress: Int((Double(timeCount) / songTime) * Double(300)))
+                progress: Int((Double(timeCount) / (songTime+delayed)) * Double(300)))
             .padding(.top, 5)
             .padding(.leading, -380)
             .onAppear {
                 Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { time in
                     self.timeCount += 1
 
-                    if timeCount >= Int(songTime) {
+                    if timeCount >= Int(songTime + delayed) {
                         time.invalidate()
                     }
                 }
             }
         }.onAppear {
-            SongService.instance.playSong(song: "twinkle", volume: 0.1)
-            AudioRecorder.instance.startRecording()
+            Timer.scheduledTimer(withTimeInterval: delayed, repeats: false) { time in
+                SongService.instance.playSong()
+                AudioRecorder.instance.startRecording()
+            }
+            
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
-                if elapsedTime >= songTime {
+                if elapsedTime >= songTime + delayed {
                     timer.invalidate()
                     shouldShowPlayRecordView = true
                     stopAllActivity()

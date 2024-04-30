@@ -13,10 +13,12 @@ struct PlayGameView: View {
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowContentView = false
     
-    @State private var backsound: String = "twinkle"
+    @State private var backsound: String = "backsound.wav"
     
     init() {
-        SongService.instance.playSong(song: backsound, volume: 0.1)    }
+        SongService.instance.preparePlaySong(song: backsound, volume: 0.1)
+        SongService.instance.playSong()
+    }
     
     
     var body: some View {

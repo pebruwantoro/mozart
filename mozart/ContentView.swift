@@ -12,7 +12,8 @@ struct ContentView: View {
     @State private var shouldShowPlayRecordView = false
     
     var notes = [
-        Notes(nada: 0, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 0, beat: 1),
         Notes(nada: 1, beat: 1),
         Notes(nada: 1, beat: 1),
         Notes(nada: 2, beat: 1),
@@ -20,7 +21,8 @@ struct ContentView: View {
         Notes(nada: 3, beat: 1),
         Notes(nada: 3, beat: 1),
         
-        Notes(nada: 4, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 4, beat: 1),
         Notes(nada: 5, beat: 1),
         Notes(nada: 5, beat: 1),
         Notes(nada: 4, beat: 1),
@@ -28,7 +30,8 @@ struct ContentView: View {
         Notes(nada: 0, beat: 1),
         Notes(nada: 0, beat: 1),
         
-        Notes(nada: 1, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 1, beat: 1),
         Notes(nada: 2, beat: 1),
         Notes(nada: 2, beat: 1),
         Notes(nada: 3, beat: 1),
@@ -36,7 +39,8 @@ struct ContentView: View {
         Notes(nada: 4, beat: 1),
         Notes(nada: 4, beat: 1),
         
-        Notes(nada: 1, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 1, beat: 1),
         Notes(nada: 2, beat: 1),
         Notes(nada: 2, beat: 1),
         Notes(nada: 3, beat: 1),
@@ -44,7 +48,8 @@ struct ContentView: View {
         Notes(nada: 4, beat: 1),
         Notes(nada: 4, beat: 1),
         
-        Notes(nada: 0, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 0, beat: 1),
         Notes(nada: 1, beat: 1),
         Notes(nada: 1, beat: 1),
         Notes(nada: 2, beat: 1),
@@ -52,7 +57,8 @@ struct ContentView: View {
         Notes(nada: 3, beat: 1),
         Notes(nada: 3, beat: 1),
         
-        Notes(nada: 4, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 4, beat: 1),
         Notes(nada: 5, beat: 1),
         Notes(nada: 5, beat: 1),
         Notes(nada: 4, beat: 1),

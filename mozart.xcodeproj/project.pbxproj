@@ -36,6 +36,7 @@
 		8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6222BDBCAD70009B059 /* RecorderService.swift */; };
 		8BF5E6252BDBCCD00009B059 /* PlayRecordSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */; };
 		956416802BE08929001D0DF8 /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9564167F2BE08929001D0DF8 /* twinkle.mp3 */; };
+		956416822BE08EE5001D0DF8 /* twinkletest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 956416812BE08EE5001D0DF8 /* twinkletest.mp3 */; };
 		958AB2472BDF6CAF00CA0DDA /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AB2462BDF6CAF00CA0DDA /* Notes.swift */; };
 		958AB2492BDF6D0800CA0DDA /* PianoSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		8BF5E6222BDBCAD70009B059 /* RecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderService.swift; sourceTree = "<group>"; };
 		8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRecordSongView.swift; sourceTree = "<group>"; };
 		9564167F2BE08929001D0DF8 /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = twinkle.mp3; path = ../../../../Downloads/twinkle.mp3; sourceTree = "<group>"; };
+		956416812BE08EE5001D0DF8 /* twinkletest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = twinkletest.mp3; path = ../../../../Downloads/twinkletest.mp3; sourceTree = "<group>"; };
 		958AB2462BDF6CAF00CA0DDA /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 		24E348042BDB67ED00A63F97 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				956416812BE08EE5001D0DF8 /* twinkletest.mp3 */,
 				9564167F2BE08929001D0DF8 /* twinkle.mp3 */,
 				8BF5E61D2BDBB87B0009B059 /* backsound.wav */,
 				24E348062BDB681900A63F97 /* a.wav */,
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E3480E2BDB681900A63F97 /* coctave.wav in Resources */,
+				956416822BE08EE5001D0DF8 /* twinkletest.mp3 in Resources */,
 				8BD772402BDA173400A16879 /* README.md in Resources */,
 				24E348122BDB681900A63F97 /* g.wav in Resources */,
 				8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */,

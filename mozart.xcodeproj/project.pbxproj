@@ -31,6 +31,10 @@
 		8BD772392BD9FFD700A16879 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */; };
 		8BD772402BDA173400A16879 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8BD7723F2BDA173400A16879 /* README.md */; };
 		8BEC2C562BDFD08100AD1864 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BEC2C552BDFD08100AD1864 /* .gitignore */; };
+		8BEE910C2BE26D0A009E7650 /* normal.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BEE910B2BE26D0A009E7650 /* normal.json */; };
+		8BEE910F2BE26F37009E7650 /* noob.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BEE910D2BE26F37009E7650 /* noob.json */; };
+		8BEE91102BE26F37009E7650 /* perfect.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BEE910E2BE26F37009E7650 /* perfect.json */; };
+		8BF115012BE24AB1008E29FE /* ScoreAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF115002BE24AB1008E29FE /* ScoreAnimationView.swift */; };
 		8BF19A152BE08B3A00F8BA8E /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BF19A142BE08B3A00F8BA8E /* twinkle.mp3 */; };
 		8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BF5E61D2BDBB87B0009B059 /* backsound.wav */; };
 		8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6202BDBC7610009B059 /* SongService.swift */; };
@@ -66,6 +70,10 @@
 		8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BD7723F2BDA173400A16879 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8BEC2C552BDFD08100AD1864 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8BEE910B2BE26D0A009E7650 /* normal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = normal.json; sourceTree = "<group>"; };
+		8BEE910D2BE26F37009E7650 /* noob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noob.json; sourceTree = "<group>"; };
+		8BEE910E2BE26F37009E7650 /* perfect.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = perfect.json; sourceTree = "<group>"; };
+		8BF115002BE24AB1008E29FE /* ScoreAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreAnimationView.swift; sourceTree = "<group>"; };
 		8BF19A142BE08B3A00F8BA8E /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twinkle.mp3; sourceTree = "<group>"; };
 		8BF5E61D2BDBB87B0009B059 /* backsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = backsound.wav; sourceTree = "<group>"; };
 		8BF5E6202BDBC7610009B059 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
@@ -106,6 +114,9 @@
 		8B73F8972BDD11FE004EB1D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				8BEE910D2BE26F37009E7650 /* noob.json */,
+				8BEE910E2BE26F37009E7650 /* perfect.json */,
+				8BEE910B2BE26D0A009E7650 /* normal.json */,
 				8B73F8A32BDE7758004EB1D5 /* splashScreenAnimation.json */,
 				8B73F8A52BDE7D72004EB1D5 /* playRecordedSong.json */,
 				8B73F8A92BDF40C1004EB1D5 /* playGame.json */,
@@ -184,6 +195,7 @@
 				24E348132BDB683B00A63F97 /* SoundView.swift */,
 				2466CD622BDF646C007DEC3E /* MovingBackground.swift */,
 				8B367E0F2BDFC6320005CC96 /* ProgressBarMusicView.swift */,
+				8BF115002BE24AB1008E29FE /* ScoreAnimationView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -262,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E3480E2BDB681900A63F97 /* coctave.wav in Resources */,
+				8BEE91102BE26F37009E7650 /* perfect.json in Resources */,
 				8BD772402BDA173400A16879 /* README.md in Resources */,
 				24E348122BDB681900A63F97 /* g.wav in Resources */,
 				8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */,
@@ -269,6 +282,8 @@
 				24E3480C2BDB681900A63F97 /* d.wav in Resources */,
 				8B73F8AA2BDF40C1004EB1D5 /* playGame.json in Resources */,
 				24E3480F2BDB681900A63F97 /* e.wav in Resources */,
+				8BEE910C2BE26D0A009E7650 /* normal.json in Resources */,
+				8BEE910F2BE26F37009E7650 /* noob.json in Resources */,
 				24E348102BDB681900A63F97 /* c.wav in Resources */,
 				8B73F8A62BDE7D72004EB1D5 /* playRecordedSong.json in Resources */,
 				8BD772392BD9FFD700A16879 /* Preview Assets.xcassets in Resources */,
@@ -294,6 +309,7 @@
 				2466CD632BDF646C007DEC3E /* MovingBackground.swift in Sources */,
 				8B367E102BDFC6320005CC96 /* ProgressBarMusicView.swift in Sources */,
 				24E348162BDB685400A63F97 /* SoundManager.swift in Sources */,
+				8BF115012BE24AB1008E29FE /* ScoreAnimationView.swift in Sources */,
 				8BD772322BD9FFD600A16879 /* mozartApp.swift in Sources */,
 				24E348142BDB683B00A63F97 /* SoundView.swift in Sources */,
 				8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */,

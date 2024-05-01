@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var elapsedTime: TimeInterval = 0
+    @State private var elapsedTimeScore: TimeInterval = 0
     @State private var shouldShowPlayRecordView = false
+    @State private var shouldShowScore = false
+    @State private var countInput: Int = 0
     private var delayed: Double = 4.2
+    @State private var score: Int = 0
     
     var notes = [
         Notes(nada: -1, beat: 1),
@@ -104,6 +108,7 @@ struct ContentView: View {
                     ForEach(SoundOptions.allCases,id: \.self){ option in
                         SoundView(options: option) {
                             SoundManager.instance.playSound(sound: option)
+                            self.countInput += 1
                         }
                     }
                 }.frame(width: 1000).background(Color(.first))
@@ -125,12 +130,26 @@ struct ContentView: View {
                     }
                 }
             }
+            
+            if shouldShowScore {
+                ScoreAnimationView(score: getScore(count: Int(countInput)))
+                    .onAppear{
+                    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {time in
+                        elapsedTimeScore += 1
+                        if elapsedTimeScore == 7 {
+                            time.invalidate()
+                            shouldShowPlayRecordView = true
+                        }
+                    }
+                }
+
+            }
         }.onAppear {
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
                 if elapsedTime >= songTime + delayed {
                     timer.invalidate()
-                    shouldShowPlayRecordView = true
+                    shouldShowScore = true
                     stopAllActivity()
                 }
             }
@@ -142,7 +161,14 @@ struct ContentView: View {
                 }
             }
         }
-        
+    }
+    
+    private func getScore(count: Int) -> Int {
+        if count > notes.count {
+            return Int(40 - (2*(Double(count) / Double(notes.count))))
+        } else {
+            return Int((Double(count) / Double(notes.count)) * 100)
+        }
     }
     
     private func stopAllActivity() {

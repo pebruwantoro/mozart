@@ -262,7 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E3480E2BDB681900A63F97 /* coctave.wav in Resources */,
-				956416822BE08EE5001D0DF8 /* twinkletest.mp3 in Resources */,
 				8BD772402BDA173400A16879 /* README.md in Resources */,
 				24E348122BDB681900A63F97 /* g.wav in Resources */,
 				8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */,
@@ -437,7 +436,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mozart/Preview Content\"";
-				DEVELOPMENT_TEAM = U5CZ6K98KV;
+				DEVELOPMENT_TEAM = M6ZUY47J83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -466,7 +465,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mozart/Preview Content\"";
-				DEVELOPMENT_TEAM = U5CZ6K98KV;
+				DEVELOPMENT_TEAM = M6ZUY47J83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

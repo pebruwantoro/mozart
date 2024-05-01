@@ -13,7 +13,8 @@ struct ContentView: View {
     private var delayed: Double = 4.2
     
     var notes = [
-        Notes(nada: 0, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 0, beat: 1),
         Notes(nada: 1, beat: 1),
         Notes(nada: 1, beat: 1),
         Notes(nada: 2, beat: 1),
@@ -21,7 +22,8 @@ struct ContentView: View {
         Notes(nada: 3, beat: 1),
         Notes(nada: 3, beat: 1),
         
-        Notes(nada: 4, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 4, beat: 1),
         Notes(nada: 5, beat: 1),
         Notes(nada: 5, beat: 1),
         Notes(nada: 4, beat: 1),
@@ -29,7 +31,8 @@ struct ContentView: View {
         Notes(nada: 0, beat: 1),
         Notes(nada: 0, beat: 1),
         
-        Notes(nada: 1, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 1, beat: 1),
         Notes(nada: 2, beat: 1),
         Notes(nada: 2, beat: 1),
         Notes(nada: 3, beat: 1),
@@ -37,7 +40,8 @@ struct ContentView: View {
         Notes(nada: 4, beat: 1),
         Notes(nada: 4, beat: 1),
         
-        Notes(nada: 1, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 1, beat: 1),
         Notes(nada: 2, beat: 1),
         Notes(nada: 2, beat: 1),
         Notes(nada: 3, beat: 1),
@@ -45,7 +49,8 @@ struct ContentView: View {
         Notes(nada: 4, beat: 1),
         Notes(nada: 4, beat: 1),
         
-        Notes(nada: 0, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 0, beat: 1),
         Notes(nada: 1, beat: 1),
         Notes(nada: 1, beat: 1),
         Notes(nada: 2, beat: 1),
@@ -53,7 +58,8 @@ struct ContentView: View {
         Notes(nada: 3, beat: 1),
         Notes(nada: 3, beat: 1),
         
-        Notes(nada: 4, beat: 2),
+        Notes(nada: -1, beat: 1),
+        Notes(nada: 4, beat: 1),
         Notes(nada: 5, beat: 1),
         Notes(nada: 5, beat: 1),
         Notes(nada: 4, beat: 1),
@@ -65,13 +71,14 @@ struct ContentView: View {
     private var songTime: Double = 0
 
     init() {
-        self.songTime = songLength(song: "backsound")
+        self.songTime = songLength(song: "twinkle.mp3")
+        SongService.instance.preparePlaySong(song: "twinkle.mp3", volume: 0.4)
+        AudioRecorder.instance.startRecording()
     }
     
     var body: some View {
         ZStack{
             MovingBackground()
-
             VStack(spacing: 0){
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in
@@ -111,20 +118,17 @@ struct ContentView: View {
             .padding(.top, 5)
             .padding(.leading, -380)
             .onAppear {
-                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { time in
+                Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { time in
                     self.timeCount += 1
-
                     if timeCount >= Int(songTime) {
                         time.invalidate()
                     }
                 }
             }
         }.onAppear {
-            SongService.instance.playSong(song: "backsound", volume: 0.1)
-            AudioRecorder.instance.startRecording()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
-                if elapsedTime >= songTime {
+                if elapsedTime >= songTime + delayed {
                     timer.invalidate()
                     shouldShowPlayRecordView = true
                     stopAllActivity()

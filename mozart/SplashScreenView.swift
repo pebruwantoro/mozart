@@ -12,7 +12,8 @@ struct SplashScreenView: View {
     
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowContentView = false
-
+    @State private var soundsLoaded = false
+    
     var body: some View {
         NavigationView {
             GeometryReader { geo in
@@ -32,6 +33,8 @@ struct SplashScreenView: View {
                 }
             }.background(.first)
         }.onAppear {
+            preloadSounds()
+            
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
                 if elapsedTime == 4 {
@@ -43,11 +46,23 @@ struct SplashScreenView: View {
         .fullScreenCover(isPresented: $shouldShowContentView) {
             PlayGameView()
         }
-
+        
     }
     
     private func shouldRotate(_ geometry: GeometryProxy) -> Double {
         return verticalSizeClass == .compact ? 0 : 0
+    }
+    
+    private func preloadSounds() {
+        DispatchQueue.global().async {
+            
+            SoundManager.instance.preloadSounds()
+            
+            DispatchQueue.main.async {
+                self.soundsLoaded = true
+                
+            }
+        }
     }
 }
 

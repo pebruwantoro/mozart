@@ -38,9 +38,17 @@ struct PlayGameView: View {
                     }
                 }
             }.background(.first)
-        }.onTapGesture {
+        }.onSubmit {
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { time in
+                elapsedTime += 1
+                
+                if elapsedTime == 5 {
+                    SongService.instance.stopAllSounds()
+                }
+            }
+        }
+        .onTapGesture {
             shouldShowContentView = true
-            SongService.instance.stopAllSounds()
         }
         .fullScreenCover(isPresented: $shouldShowContentView) {
             ContentView()

@@ -147,7 +147,7 @@ struct ContentView: View {
         }.onAppear {
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
                 elapsedTime += 1
-                if elapsedTime >= songTime + delayed {
+                if elapsedTime >= songTime + 2 {
                     timer.invalidate()
                     shouldShowScore = true
                     stopAllActivity()
@@ -165,7 +165,7 @@ struct ContentView: View {
     
     private func getScore(count: Int) -> Int {
         if count > notes.count {
-            return Int(40 - (2*(Double(count) / Double(notes.count))))
+            return Int(60 - (2*(Double(count) / Double(notes.count))))
         } else {
             return Int((Double(count) / Double(notes.count)) * 100)
         }

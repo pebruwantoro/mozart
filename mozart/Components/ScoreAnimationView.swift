@@ -13,12 +13,15 @@ struct ScoreAnimationView: View {
     private var perfect: String
     private var noob: String
     private var normal: String
-    
+    private var musicFile: String = ""
+
     init(score: Int) {
         self.perfect = "perfect.json"
         self.noob = "noob.json"
         self.normal = "normal.json"
         self.score = score
+        self.musicFile = getMusicFile(score: score)
+        playMusic(fileName: musicFile)
     }
     
     var body: some View {
@@ -32,7 +35,7 @@ struct ScoreAnimationView: View {
                                 .scaledToFit()
                                 .imageScale(.large)
                                 .rotationEffect(.degrees(shouldRotate(geo)))
-                                .frame(width: geo.size.width * 1, height: geo.size.height * 1)
+                                .frame(width: geo.size.width * 2, height: geo.size.height * 2)
                                 .position(x: geo.size.width / 2, y: geo.size.height / 2)
                         }
                         Spacer()
@@ -47,24 +50,38 @@ struct ScoreAnimationView: View {
     }
     
     private func getAnimation(score: Int) -> String {
-        var animation: String = ""
-        
-        if score <= 100 {
-            switch score {
-            case 0...40:
-                animation = noob
-            case 41...70:
-                animation = normal
-            case 70...100:
-                animation = perfect
-            default:
-                animation = ""
-            }
+        switch score {
+        case 0...40:
+            return noob
+        case 41...70:
+            return normal
+        case 71...100:
+            return perfect
+        default:
+            return ""
         }
-        
-        return animation
+    }
+    
+    private func getMusicFile(score: Int) -> String {
+        switch score {
+        case 0...40:
+            return "boo.mp3"
+        case 41...70:
+            return "cheer.mp3"
+        case 71...100:
+            return "cheer.mp3"
+        default:
+            return ""
+        }
+    }
+    
+    private func playMusic(fileName: String) {
+
+         SongService.instance.preparePlaySong(song: fileName, volume: 0.8)
+         SongService.instance.playSong()
     }
 }
+
 
 #Preview {
     ScoreAnimationView(score: 100)

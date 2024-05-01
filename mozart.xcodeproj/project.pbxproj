@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		244DAB6A2BE2A6AC004ED865 /* cheer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 244DAB682BE2A6AC004ED865 /* cheer.mp3 */; };
+		244DAB6B2BE2A6AC004ED865 /* boo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 244DAB692BE2A6AC004ED865 /* boo.mp3 */; };
 		2466CD632BDF646C007DEC3E /* MovingBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2466CD622BDF646C007DEC3E /* MovingBackground.swift */; };
 		24E3480C2BDB681900A63F97 /* d.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348052BDB681900A63F97 /* d.wav */; };
 		24E3480D2BDB681900A63F97 /* a.wav in Resources */ = {isa = PBXBuildFile; fileRef = 24E348062BDB681900A63F97 /* a.wav */; };
@@ -45,6 +47,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		244DAB682BE2A6AC004ED865 /* cheer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cheer.mp3; sourceTree = "<group>"; };
+		244DAB692BE2A6AC004ED865 /* boo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = boo.mp3; sourceTree = "<group>"; };
 		2466CD622BDF646C007DEC3E /* MovingBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingBackground.swift; sourceTree = "<group>"; };
 		24E348052BDB681900A63F97 /* d.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = d.wav; sourceTree = "<group>"; };
 		24E348062BDB681900A63F97 /* a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = a.wav; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		24E348042BDB67ED00A63F97 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				244DAB692BE2A6AC004ED865 /* boo.mp3 */,
+				244DAB682BE2A6AC004ED865 /* cheer.mp3 */,
 				8BF19A142BE08B3A00F8BA8E /* twinkle.mp3 */,
 				8BF5E61D2BDBB87B0009B059 /* backsound.wav */,
 				24E348062BDB681900A63F97 /* a.wav */,
@@ -275,9 +281,11 @@
 			files = (
 				24E3480E2BDB681900A63F97 /* coctave.wav in Resources */,
 				8BEE91102BE26F37009E7650 /* perfect.json in Resources */,
+				244DAB6A2BE2A6AC004ED865 /* cheer.mp3 in Resources */,
 				8BD772402BDA173400A16879 /* README.md in Resources */,
 				24E348122BDB681900A63F97 /* g.wav in Resources */,
 				8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */,
+				244DAB6B2BE2A6AC004ED865 /* boo.mp3 in Resources */,
 				8BF19A152BE08B3A00F8BA8E /* twinkle.mp3 in Resources */,
 				24E3480C2BDB681900A63F97 /* d.wav in Resources */,
 				8B73F8AA2BDF40C1004EB1D5 /* playGame.json in Resources */,
@@ -452,7 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mozart/Preview Content\"";
-				DEVELOPMENT_TEAM = U5CZ6K98KV;
+				DEVELOPMENT_TEAM = M6ZUY47J83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -481,7 +489,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mozart/Preview Content\"";
-				DEVELOPMENT_TEAM = U5CZ6K98KV;
+				DEVELOPMENT_TEAM = M6ZUY47J83;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

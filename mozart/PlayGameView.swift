@@ -32,7 +32,7 @@ struct PlayGameView: View {
                             .scaledToFit()
                             .imageScale(.large)
                             .rotationEffect(.degrees(shouldRotate(geo)))
-                            .frame(width: geo.size.width * 3, height: geo.size.height * 3)
+                            .frame(width: geo.size.width * 4, height: geo.size.height * 4)
                             .position(x: geo.size.width / 2, y: geo.size.height / 2)
                         Spacer()
                     }

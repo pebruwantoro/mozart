@@ -12,7 +12,7 @@ struct PianoSheet: View {
     @State var pianoOffset: CGFloat = -3050
     @State var beat: Double
     @State var tone : Int
-    @State var time:Double =  0.0069
+    @State var time:Double =  0.00697
     var body: some View {
         HStack(spacing:30){
             ForEach(0..<6){ i in

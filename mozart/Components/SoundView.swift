@@ -19,26 +19,24 @@ struct SoundView: View {
             let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
             action()
-            withAnimation(.easeInOut(duration: 0.1)) {
-                isPressed = true
-            }
+            isPressed = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                withAnimation(.easeInOut(duration: 0.1)) {
+                withAnimation(.easeInOut(duration: 0.5)) {
                     isPressed = false
                 }
             }
         }) {
             Rectangle()
-                .foregroundColor(.fourth)
+                .foregroundColor(isPressed ? .black : .fourth)
                 .frame(width: 90, height: 50)
                 .aspectRatio(contentMode: .fill)
                 .shadow(radius: 10)
-                .scaleEffect(isPressed ? 0.9 : 1.0)
-        }
-        .onTapGesture {
-
+                .scaleEffect(isPressed ? 1.1 : 1.0)
         }
     }
 }
+
+
+
 
 

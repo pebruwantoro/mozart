@@ -24,6 +24,7 @@ struct LottieView: UIViewRepresentable {
         animationView.play()
         animationView.contentMode = .scaleAspectFill
         animationView.animationSpeed = CGFloat(speed)
+        animationView.frame = CGRect(origin: .zero, size: CGSize(width: 20, height: 20))
         return animationView
     }
 }

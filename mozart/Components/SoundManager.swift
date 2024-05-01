@@ -23,6 +23,7 @@ class SoundManager {
             do {
                 let player = try AVAudioPlayer(contentsOf: url)
                 player.prepareToPlay()
+                player.volume = 3
                 players[option] = player
             } catch let error {
                 print("Error loading sound \(option.rawValue): \(error.localizedDescription)")

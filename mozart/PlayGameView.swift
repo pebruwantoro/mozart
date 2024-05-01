@@ -13,10 +13,12 @@ struct PlayGameView: View {
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowContentView = false
     
-    @State private var backsound: String = "backsound"
+    @State private var backsound: String = "backsound.wav"
     
     init() {
-        SongService.instance.playSong(song: backsound, volume: 0.1)    }
+        SongService.instance.preparePlaySong(song: backsound, volume: 0.1)
+        SongService.instance.playSong()
+    }
     
     
     var body: some View {
@@ -36,9 +38,17 @@ struct PlayGameView: View {
                     }
                 }
             }.background(.first)
-        }.onTapGesture {
+        }.onSubmit {
+            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { time in
+                elapsedTime += 1
+                
+                if elapsedTime == 5 {
+                    SongService.instance.stopAllSounds()
+                }
+            }
+        }
+        .onTapGesture {
             shouldShowContentView = true
-            SongService.instance.stopAllSounds()
         }
         .fullScreenCover(isPresented: $shouldShowContentView) {
             ContentView()

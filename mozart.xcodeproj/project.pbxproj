@@ -31,6 +31,7 @@
 		8BD772392BD9FFD700A16879 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */; };
 		8BD772402BDA173400A16879 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8BD7723F2BDA173400A16879 /* README.md */; };
 		8BEC2C562BDFD08100AD1864 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BEC2C552BDFD08100AD1864 /* .gitignore */; };
+		8BF19A152BE08B3A00F8BA8E /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BF19A142BE08B3A00F8BA8E /* twinkle.mp3 */; };
 		8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BF5E61D2BDBB87B0009B059 /* backsound.wav */; };
 		8BF5E6212BDBC7610009B059 /* SongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6202BDBC7610009B059 /* SongService.swift */; };
 		8BF5E6232BDBCAD70009B059 /* RecorderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5E6222BDBCAD70009B059 /* RecorderService.swift */; };
@@ -65,6 +66,7 @@
 		8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BD7723F2BDA173400A16879 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8BEC2C552BDFD08100AD1864 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8BF19A142BE08B3A00F8BA8E /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twinkle.mp3; sourceTree = "<group>"; };
 		8BF5E61D2BDBB87B0009B059 /* backsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = backsound.wav; sourceTree = "<group>"; };
 		8BF5E6202BDBC7610009B059 /* SongService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongService.swift; sourceTree = "<group>"; };
 		8BF5E6222BDBCAD70009B059 /* RecorderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderService.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		24E348042BDB67ED00A63F97 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				8BF19A142BE08B3A00F8BA8E /* twinkle.mp3 */,
 				8BF5E61D2BDBB87B0009B059 /* backsound.wav */,
 				24E348062BDB681900A63F97 /* a.wav */,
 				24E348092BDB681900A63F97 /* c.wav */,
@@ -140,22 +143,18 @@
 		8BD772302BD9FFD600A16879 /* mozart */ = {
 			isa = PBXGroup;
 			children = (
+				8BF19A172BE08DD000F8BA8E /* Components */,
 				8B73F89A2BDD2813004EB1D5 /* LottieViewHelper */,
 				8B73F8972BDD11FE004EB1D5 /* Assets */,
 				8BF5E61F2BDBC7540009B059 /* Service */,
-				8BD772312BD9FFD600A16879 /* mozartApp.swift */,
-				958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */,
-				958AB2462BDF6CAF00CA0DDA /* Notes.swift */,
-				8BD772332BD9FFD600A16879 /* ContentView.swift */,
-				24E348152BDB685400A63F97 /* SoundManager.swift */,
-				24E348132BDB683B00A63F97 /* SoundView.swift */,
-				8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */,
-				8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */,
-				2466CD622BDF646C007DEC3E /* MovingBackground.swift */,
-				8B73F8A72BDF404F004EB1D5 /* PlayGameView.swift */,
-				8B367E0F2BDFC6320005CC96 /* ProgressBarMusicView.swift */,
-				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
+				8BF19A162BE08D8100F8BA8E /* Model */,
 				24E348042BDB67ED00A63F97 /* Notes */,
+				8BD772312BD9FFD600A16879 /* mozartApp.swift */,
+				8B73F8922BDD0FCD004EB1D5 /* SplashScreenView.swift */,
+				8BD772332BD9FFD600A16879 /* ContentView.swift */,
+				8B73F8A72BDF404F004EB1D5 /* PlayGameView.swift */,
+				8BF5E6242BDBCCD00009B059 /* PlayRecordSongView.swift */,
+				8BD772352BD9FFD700A16879 /* Assets.xcassets */,
 				8BD772372BD9FFD700A16879 /* Preview Content */,
 			);
 			path = mozart;
@@ -167,6 +166,26 @@
 				8BD772382BD9FFD700A16879 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8BF19A162BE08D8100F8BA8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				958AB2462BDF6CAF00CA0DDA /* Notes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8BF19A172BE08DD000F8BA8E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				958AB2482BDF6D0800CA0DDA /* PianoSheet.swift */,
+				24E348152BDB685400A63F97 /* SoundManager.swift */,
+				24E348132BDB683B00A63F97 /* SoundView.swift */,
+				2466CD622BDF646C007DEC3E /* MovingBackground.swift */,
+				8B367E0F2BDFC6320005CC96 /* ProgressBarMusicView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		8BF5E61F2BDBC7540009B059 /* Service */ = {
@@ -243,9 +262,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24E3480E2BDB681900A63F97 /* coctave.wav in Resources */,
+				956416822BE08EE5001D0DF8 /* twinkletest.mp3 in Resources */,
 				8BD772402BDA173400A16879 /* README.md in Resources */,
 				24E348122BDB681900A63F97 /* g.wav in Resources */,
 				8BF5E61E2BDBB87B0009B059 /* backsound.wav in Resources */,
+				8BF19A152BE08B3A00F8BA8E /* twinkle.mp3 in Resources */,
 				24E3480C2BDB681900A63F97 /* d.wav in Resources */,
 				8B73F8AA2BDF40C1004EB1D5 /* playGame.json in Resources */,
 				24E3480F2BDB681900A63F97 /* e.wav in Resources */,

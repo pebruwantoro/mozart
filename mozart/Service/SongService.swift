@@ -13,8 +13,8 @@ class SongService {
     
     private var player: AVAudioPlayer!
     
-    func playSong(song: String, volume: Float?) {
-        guard let url = Bundle.main.url(forResource: song, withExtension: "wav") else { return }
+    func preparePlaySong(song: String, volume: Float?) {
+        guard let url = Bundle.main.url(forResource: song, withExtension: nil) else { return }
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
@@ -24,18 +24,18 @@ class SongService {
             }
             
             player.prepareToPlay()
-            player.play()
+//            player.play()
         } catch let error {
             fatalError("Error playing sound 1: \(error.localizedDescription)")
         }
-    }
+}
         
     func stopAllSounds() {
         player?.stop()
     }
     
     func getSongDuration(file: String) -> Double {
-        guard let url = Bundle.main.url(forResource: file, withExtension: "wav")
+        guard let url = Bundle.main.url(forResource: file, withExtension: nil)
         else {
             fatalError("Can't find the song")
         }
@@ -48,5 +48,9 @@ class SongService {
         } catch let error {
             fatalError("Error get duration song: \(error.localizedDescription)")
         }
+    }
+    
+    func playSong() {
+        player.play()
     }
 }

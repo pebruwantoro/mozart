@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var elapsedTime: TimeInterval = 0
     @State private var shouldShowPlayRecordView = false
+    private var delayed: Double = 4.2
     
     var notes = [
         Notes(nada: 0, beat: 2),
@@ -86,6 +87,11 @@ struct ContentView: View {
                         PianoSheet(beat: note.beat, tone: note.nada)
                     }
                 }.frame(width:690,height: 0)
+                    .onAppear(perform: {
+                    Timer.scheduledTimer(withTimeInterval: delayed, repeats: false) { time in
+                        SongService.instance.playSong()
+                    }
+                })
                 
                 HStack(spacing: 30){
                     ForEach(SoundOptions.allCases,id: \.self){ option in
@@ -97,6 +103,7 @@ struct ContentView: View {
                     .scaledToFill()
                     .safeAreaPadding(.bottom,24)
             }
+            
             ProgressBarMusicView(
                 width: 5,
                 height: Int(300),

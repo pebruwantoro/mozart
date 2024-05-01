@@ -7,7 +7,6 @@
 
 import Foundation
 import AVFoundation
-import ReplayKit
 
 
 class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
@@ -18,16 +17,15 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
     private var session : AVAudioSession! = AVAudioSession.sharedInstance()
     
     func startRecording(){
-        let opstions = [
+        let options = [
             AVAudioSession.CategoryOptions.defaultToSpeaker,
             AVAudioSession.CategoryOptions.duckOthers,
             AVAudioSession.CategoryOptions.interruptSpokenAudioAndMixWithOthers
         ]
         
         do {
-            
-            try session.setCategory(.playAndRecord, mode: .default, options: AVAudioSession.CategoryOptions(opstions))
-            try session.setActive(true)
+            try session.setCategory(.playAndRecord, mode: .spokenAudio, options: AVAudioSession.CategoryOptions(options))
+            try session.setActive(true, options: .notifyOthersOnDeactivation)
         } catch let error {
             fatalError("Can not setup the Recording: \(error.localizedDescription)")
         }
@@ -77,9 +75,4 @@ class AudioRecorder: NSObject , ObservableObject , AVAudioPlayerDelegate  {
             fatalError("Error playing recorded sound: \(error.localizedDescription)")
         }
     }    
-}
-
-
-class AudioRecorder2: NSObject , ObservableObject , AVAudioPlayerDelegate {
-    
 }
